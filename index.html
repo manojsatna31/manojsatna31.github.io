@@ -1,1 +1,934 @@
-<h1>My First Tech Blog</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Manoj Mishra - Principal Full-Stack Java Developer | Cloud-Native BFS Specialist</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Responsive Resume Template">
+	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Font -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> -->
+	<!-- Local Fonts CSS -->
+	<link rel="stylesheet" href="assets/css/fonts.css">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
+
+	<!-- Print-friendly CSS -->
+	<link rel="stylesheet" href="assets/css/print.css" media="print">
+	
+	<style>
+		@media print {
+			@page {
+				size: A4 portrait;
+				margin: 15mm;
+			}
+			
+			body {
+				font-size: 12pt;
+				-webkit-print-color-adjust: exact;
+				print-color-adjust: exact;
+			}
+			
+			.page-break-after {
+				page-break-after: always;
+				break-after: page;
+			}
+			
+			.page-break-before {
+				page-break-before: always;
+				break-before: page;
+			}
+			
+			.resume-timeline-item,
+			.resume-section,
+			.resume-header {
+				page-break-inside: avoid;
+				break-inside: avoid;
+			}
+			
+			.text-white {
+				color: #000 !important;
+			}
+			
+			.shadow-lg {
+				box-shadow: none !important;
+				border: 1px solid #ddd !important;
+			}
+			
+			footer {
+				display: none !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<article class="resume-wrapper text-center position-relative">
+		<div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
+			<header class="resume-header pt-4 pt-md-0">
+				<div class="row">
+					<div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
+						<img class="picture" src="assets/images/ManojMishra.jpg" alt="Profile Picture">
+					</div><!--//col-->
+					<div class="col p-3 p-md-4">
+						<h1 class="name mt-0 mb-1 text-white ">Manoj Mishra</h1>
+						<div class="title mb-3">Principal Full-Stack Java Developer | Cloud-Native BFS Specialist</div>
+						<ul class="list-unstyled mb-3">
+							<li class="mb-2"><a class="text-link"
+									href="mailto:manoj.satna31@gmail.com"><i class="far fa-envelope fa-fw me-2"
+										data-fa-transform="grow-3"></i>manoj.satna31@gmail.com</a></li>
+							<li><a class="text-link" href="tel:+91-8976420690s"><i
+										class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i>+91-8976420690s</a></li>
+						</ul>
+						<ul class="resume-social list-inline"> <!-- Max 4 otherwise aliginment -->
+							<!-- <li class="mb-2"><a class="text-link" href="https://linkedin.com/in/reachmm" target="_blank"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/in/reachmm</a></li>
+					                <li class="mb-2"><a class="text-link" href="https://github.com/manojsatna31" target="_blank"><span class="fa-container text-center me-2"><i class="fab fa-square-github fa-fw"></i></span>github.com/manojsatna31</a></li>
+					                
+									<li class="mb-2"><a class="text-link" href="https://medium.com/@manoj.satna31" target="_blank"><span class="fa-container text-center me-2"><i class="fab fa-medium fa-fw"></i></span>medium.com/@manoj.satna31</a></li>
+									<li class="mb-2"><a class="text-link" href="https://dev.to/manojsatna31" target="_blank"><span class="fa-container text-center me-2"><i class="fas fa-brands fa-dev"></i></span>dev.to/manojsatna31</a></li>
+					                <li class="mb-2"><a class="text-link" href="https://dev.to/manojsatna31" target="_blank"><span class="fa-container text-center me-2"><i class="fas fa-globe"></i></span>dev.to/manojsatna31</a></li>									 -->
+							<li class="list-inline-item mb-2 me-3"><a class="text-link"
+									href="https://linkedin.com/in/reachmm" target="_blank"><span
+										class="fa-container text-center me-2"><i
+											class="fab fa-linkedin-in fa-fw"></i></span></a></li>
+							<li class="list-inline-item mb-2 me-3"><a class="text-link"
+									href="https://github.com/manojsatna31" target="_blank"><span
+										class="fa-container text-center me-2"><i
+											class="fab fa-square-github fa-fw"></i></span></a></li>
+							
+							<li class="list-inline-item mb-2 me-3"><a class="text-link"
+									href="https://medium.com/@manoj.satna31" target="_blank"><span
+										class="fa-container text-center me-2"><i
+											class="fab fa-medium fa-fw"></i></span></a></li>
+							<li class="list-inline-item mb-2 me-3"><a class="text-link"
+									href="https://dev.to/manojsatna31" target="_blank"><span
+										class="fa-container text-center me-2"><i
+											class="fas fa-brands fa-dev"></i></span></a></li>
+							<li class="list-inline-item mb-2 me-3"><a class="text-link"
+									href="https://dev.to/manojsatna31" target="_blank"><span
+										class="fa-container text-center me-2"><i class="fas fa-globe"></i></span></a>
+							</li>
+						</ul>
+					</div><!--//col-->
+				</div><!--//row-->
+			</header>
+			<div class="resume-body p-5">
+				<section class="resume-section summary-section mb-5">
+					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Career Summary</h2>
+					<div class="resume-section-content">
+						
+						<p class="mb-0"><p><strong>Full-Stack Java Developer</strong> with 15+ years of experience building scalable, high-performance web applications that solve real-world business problems. Expert in <strong>Java, Spring Boot, Microservices</strong>, and modern JavaScript frameworks like <strong>React</strong> and <strong>Angular</strong>, with deep experience in the <strong>Banking & Financial Services (BFS)</strong> domain. Skilled in cloud platforms like <strong>AWS</strong> and <strong>PCF</strong>, with a proven track record of on-time delivery, clean code, and technical leadership. Passionate about emerging technologies and delivering solutions that create measurable business value.</p></p> 
+							
+					</div>
+				</section><!--//summary-section-->
+				<div class="row">
+					<div class="col-lg-9">
+						<section class="resume-section experience-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience
+							</h2>
+							<div class="resume-section-content">
+								<div class="resume-timeline position-relative">
+									
+									<article
+										class="resume-timeline-item position-relative pb-5">
+										<div class="resume-timeline-item-header mb-2">
+											<div class="d-flex flex-column flex-md-row">
+												<h3 class="resume-position-title font-weight-bold mb-1">Associate Vice President </h3>
+												<div class="resume-company-name ms-auto">
+													
+													<a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+														href="https://www.jpmorgan.com/IN/en/about-us" target="_blank">
+														JP Morgan Chase &amp; co. 
+													</a>
+													
+												</div>
+											</div><!--//row-->
+											<div class="resume-position-time">Nov 2019 - Present</div>
+										</div><!--//resume-timeline-item-header-->
+										<div class="resume-timeline-item-desc">
+											
+											<p>Managed development milestones from initiation to final delivery. Contributed ideas in team meetings and provided updates on deadlines and designs. Reviewed code, debugged issues, and handled large-scale software deployments. Designed systems to enhance productivity and meet user needs. Used Bitbucket for version control and tracked progress with Scrum methodology. Built scalable and modular software products.</p>
+											
+
+											
+											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Role:</h4>
+											
+											<p>Led efficient large-scale software deployments, and designed systems to enhance productivity. Improved code quality through reviews and debugging. Implemented Bitbucket for version control and tracked progress using Scrum methodology. Built scalable and modular software products.</p>
+											
+											
+											<ul>
+												
+												<li>Successfully managed software development from initial stages to final delivery.</li>
+												
+												<li>Led efficient large-scale software deployments, ensuring stability and scalability.</li>
+												
+												<li>Designed systems that enhanced productivity and met user requirements.</li>
+												
+												<li>Improved code quality through thorough reviews and debugging.</li>
+												
+												<li>Implemented Bitbucket for version control and tracked progress using Scrum methodology.</li>
+												
+											</ul>
+											
+											
+
+											
+											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+											<ul class="list-inline">
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Pivotal Cloud Foundry</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Amazon Web Services</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Spring Boot</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">React</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Webpack</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Module Federation</span></li>
+												
+											</ul>
+											
+										</div><!--//resume-timeline-item-desc-->
+									</article><!--//resume-timeline-item-->
+									
+									<!-- Add page break after first and third job -->
+									<div class="page-break-after"></div>
+									
+									
+									<article
+										class="resume-timeline-item position-relative pb-5">
+										<div class="resume-timeline-item-header mb-2">
+											<div class="d-flex flex-column flex-md-row">
+												<h3 class="resume-position-title font-weight-bold mb-1">Senior Software Developer</h3>
+												<div class="resume-company-name ms-auto">
+													
+													<a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+														href="https://apac.bnppispl.com/" target="_blank">
+														BNP Paribas
+													</a>
+													
+												</div>
+											</div><!--//row-->
+											<div class="resume-position-time">Nov 2015 - Nov 2019</div>
+										</div><!--//resume-timeline-item-header-->
+										<div class="resume-timeline-item-desc">
+											
+											<p>Designed and developed custom software solutions, collaborating with project managers to define goals. Created scalable, reusable code for cloud environments while leading and mentoring a development team. Documented workflows for knowledge sharing and streamlined onboarding. Implemented agile methodologies to optimize processes and drive efficiency. Managed all stages of the software development lifecycle, from initial requirements to final deployment.</p>
+											
+
+											
+											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Role</h4>
+											
+											<p>Spearheaded software development with a balance of innovation and strategy. Crafted reusable, cloud-optimized code while mentoring a team toward best practices. Established documentation protocols for streamlined onboarding and continuous knowledge sharing. Integrated agile methodologies to boost efficiency and led the full development lifecycle, from requirement analysis to final production deployment.</p>
+											
+											
+											<ul>
+												
+												<li>Led software design and development, ensuring strategic project milestones.</li>
+												
+												<li>Developed reusable, scalable cloud-native code for distributed environments.</li>
+												
+												<li>Managed and mentored a development team, optimizing workflow efficiency.</li>
+												
+												<li>Established documentation protocols for onboarding and knowledge retention.</li>
+												
+												<li>Integrated agile practices to enhance collaboration and software delivery.</li>
+												
+											</ul>
+											
+											
+
+											
+											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+											<ul class="list-inline">
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Spring Boot</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Unix Shell</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Perl</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Sybase</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">MS SQL</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Auto Sys</span></li>
+												
+											</ul>
+											
+										</div><!--//resume-timeline-item-desc-->
+									</article><!--//resume-timeline-item-->
+									
+									
+									<article
+										class="resume-timeline-item position-relative pb-5">
+										<div class="resume-timeline-item-header mb-2">
+											<div class="d-flex flex-column flex-md-row">
+												<h3 class="resume-position-title font-weight-bold mb-1">Senior Software Developer</h3>
+												<div class="resume-company-name ms-auto">
+													
+													<a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+														href="https://www.3i-infotech.com/" target="_blank">
+														3i-Infotech Consultancy Service
+													</a>
+													
+												</div>
+											</div><!--//row-->
+											<div class="resume-position-time">Oct 2013 - Nov 2015</div>
+										</div><!--//resume-timeline-item-header-->
+										<div class="resume-timeline-item-desc">
+											
+											<p>I led software deployments, ensuring operational stability by diagnosing errors and mentoring developers. Defined customer needs to shape clear project plans, managing the full lifecycle from design to training.</p>
+											
+											<p>Streamlined application design and implementation, enhancing system usability. Engaged stakeholders to optimize development, provide technical guidance, and drive innovation through structured roadmaps.</p>
+											
+
+											
+
+											
+											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+											<ul class="list-inline">
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Java 1.8</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Spring MVC</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">JavaScript</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Weblogic Web Server</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Oracle</span></li>
+												
+											</ul>
+											
+										</div><!--//resume-timeline-item-desc-->
+									</article><!--//resume-timeline-item-->
+									
+									<!-- Add page break after first and third job -->
+									<div class="page-break-after"></div>
+									
+									
+									<article
+										class="resume-timeline-item position-relative ">
+										<div class="resume-timeline-item-header mb-2">
+											<div class="d-flex flex-column flex-md-row">
+												<h3 class="resume-position-title font-weight-bold mb-1">Senior Software Developer</h3>
+												<div class="resume-company-name ms-auto">
+													
+													<a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+														href="http://www.sysaccord.com/" target="_blank">
+														Accord Infosystems
+													</a>
+													
+												</div>
+											</div><!--//row-->
+											<div class="resume-position-time">Jan 2010 - Sep 2013</div>
+										</div><!--//resume-timeline-item-header-->
+										<div class="resume-timeline-item-desc">
+											
+											<p>Refined software engineering practices, supporting development, QA, and UX teams in product creation. Wrote clean, tested code while collaborating across departments. Submitted reports to aid development.</p>
+											
+											<p>Enhanced system stability by maintaining and upgrading products. Diagnosed and resolved coding issues, reviewed project compliance, assisted in Java development, and learned best practices from mentors.</p>
+											
+
+											
+
+											
+											<h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
+											<ul class="list-inline">
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Struts 2.0</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">JSP</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">HTML/CSS</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">JavaScript</span></li>
+												
+												<li class="list-inline-item"><span
+														class="badge bg-secondary badge-pill">Oracle</span></li>
+												
+											</ul>
+											
+										</div><!--//resume-timeline-item-desc-->
+									</article><!--//resume-timeline-item-->
+									
+									
+								</div><!--//resume-timeline-->
+							</div>
+						</section><!--//experience-section-->
+					</div>
+					<div class="col-lg-3">
+						<!-- Award section :: Start-->
+						
+						<section class="resume-section reference-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Awards</h2>
+							<div class="resume-section-content">
+								<ul class="list-unstyled resume-awards-list">
+									
+									<li
+										class="mb-2 ps-1 position-relative">
+										
+										
+										
+										
+											
+											<a href="https://www.credly.com/badges/c96c611a-867f-4bbf-8bdc-b36ec59bd970/linked_in_profile" target="_blank" rel="noopener noreferrer">
+												
+										
+										<i class="fa-brands fa-aws"></i>
+										
+										</a>
+												<span>AWS Certified</span>
+											
+										
+									</li>
+									
+									<li
+										class="mb-2 ps-1 position-relative">
+										
+										
+										
+										
+											
+											
+										
+										<i class="fa-solid fa-trophy"></i>
+										
+										
+											<span>C-DAC</span>
+										
+									</li>
+									
+									<li
+										class="mb-2 ps-1 position-relative">
+										
+										
+										
+										
+											
+											<a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-7dd10661-0828-41e0-b50d-2d3271ead64d.pdf" target="_blank" rel="noopener noreferrer">
+												
+										
+										<i class="fa-solid fa-trophy"></i>
+										
+										</a>
+												<span>Webpack 5 Ninja</span>
+											
+										
+									</li>
+									
+									<li
+										class="mb-0 ps-1 position-relative">
+										
+										
+										
+										
+											
+											<a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-55b293e6-d499-4c41-af88-9634999b2553.pdf" target="_blank" rel="noopener noreferrer">
+												
+										
+										<i class="fa-solid fa-trophy"></i>
+										
+										</a>
+												<span>React &amp; TypeScript</span>
+											
+										
+									</li>
+									
+								</ul>
+							</div>
+						</section>
+						
+						<!-- Award section :: End-->
+						
+						<!-- Add page break before Skills section -->
+						<div class="page-break-before"></div>
+						
+						<!--Skills & Tools-->
+						<section class="resume-section skills-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills & Tools
+							</h2>
+							<div class="resume-section-content">
+								
+								
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Cloud Platforms</h4>
+									<ul class="list-unstyled mb-4">
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">PCF (Pivotal Cloud Foundry)</span>
+											<!-- <span class="badge badge-light">PCF (Pivotal Cloud Foundry)</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">PCF (Pivotal Cloud Foundry)</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 98%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">AWS (Amazon Web Services)</span>
+											<!-- <span class="badge badge-light">AWS (Amazon Web Services)</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">AWS (Amazon Web Services)</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 94%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										
+									</ul>
+								</div>
+								
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Programming &amp; Scripting</h4>
+									<ul class="list-unstyled mb-4">
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Java</span>
+											<!-- <span class="badge badge-light">Java</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Java</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Python</span>
+											<!-- <span class="badge badge-light">Python</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Python</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 86%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Groovy™</span>
+											<!-- <span class="badge badge-light">Groovy™</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Groovy™</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										
+									</ul>
+								</div>
+								
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Backend &amp; Java Ecosystem</h4>
+									<ul class="list-unstyled mb-4">
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Java 17/21</span>
+											<!-- <span class="badge badge-light">Java 17/21</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Java 17/21</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Spring Framework</span>
+											<!-- <span class="badge badge-light">Spring Framework</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Spring Framework</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 86%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Spring Boot</span>
+											<!-- <span class="badge badge-light">Spring Boot</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Spring Boot</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Spring Cloud</span>
+											<!-- <span class="badge badge-light">Spring Cloud</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Spring Cloud</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 92%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Hibernate</span>
+											<!-- <span class="badge badge-light">Hibernate</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Hibernate</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Node Js</span>
+											<!-- <span class="badge badge-light">Node Js</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Node Js</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										
+									</ul>
+								</div>
+								
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Database Systems</h4>
+									<ul class="list-unstyled mb-4">
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Oracle</span>
+											<!-- <span class="badge badge-light">Oracle</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Oracle</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">MS SQL Server</span>
+											<!-- <span class="badge badge-light">MS SQL Server</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">MS SQL Server</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 86%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Sybase</span>
+											<!-- <span class="badge badge-light">Sybase</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Sybase</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">NoSql</span>
+											<!-- <span class="badge badge-light">NoSql</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">NoSql</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 92%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">Cassandra</span>
+											<!-- <span class="badge badge-light">Cassandra</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">Cassandra</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">MongoDB</span>
+											<!-- <span class="badge badge-light">MongoDB</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">MongoDB</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										 
+										<li class="list-inline-item mb-1">
+											<span class="badge bg-secondary badge-pill">ArangoDB</span>
+											<!-- <span class="badge badge-light">ArangoDB</span> -->
+
+										</li>
+
+										<!-- <li class="mb-2">
+											<div class="resume-skill-name">ArangoDB</div>
+											<div class="progress resume-progress">
+												<div class="progress-bar theme-progress-bar-dark" role="progressbar"
+													style="width: 95%;" aria-valuenow="25"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</li> -->
+										
+									</ul>
+								</div>
+								
+								
+
+								<!-- Others-->
+								
+								<div class="resume-skill-item">
+									<h4 class="resume-skills-cat font-weight-bold">Others</h4>
+									<ul class="list-inline">
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">Unix Shell Scripting</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">Perl</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">PowerShell</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">GIt</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">Bitbucket</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">IntelliJ IDEA</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">Eclipse</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">SQL Developer</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">Webpack 5</span>
+										</li>
+										
+										<li class="list-inline-item">
+											<span class="badge badge-light">Module Federation</span>
+										</li>
+										
+									</ul>
+								</div>
+								
+							</div>
+						</section>
+						<!-- education -->
+						<section class="resume-section education-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+							<div class="resume-section-content">
+								<ul class="list-unstyled">
+									
+									<li class="mb-2">
+										<div class="resume-degree font-weight-bold"><Strong>MCA</Strong></div>
+										<div class="resume-degree-org">IATS</div>
+										<div class="resume-degree-place">Gwalior, M.P - India</div>
+										<div class="resume-degree-time">Jul 2002 - Dec 2005</div>
+									</li>
+									
+									<li class="">
+										<div class="resume-degree font-weight-bold"><Strong>BSc ( COMP Hons)</Strong></div>
+										<div class="resume-degree-org">M.B Khalsa College</div>
+										<div class="resume-degree-place">Indore, M.P - India</div>
+										<div class="resume-degree-time">Jul 1996 - Jul 1999</div>
+									</li>
+									
+								</ul>
+							</div>
+						</section><!--//education-section-->
+						
+						
+						<!-- Add page break if there are many skills -->
+						<div class="page-break-before"></div>
+						
+
+
+						<!-- languages -->
+
+						
+						<section class="resume-section language-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
+							<div class="resume-section-content">
+								<ul class="list-unstyled resume-lang-list">
+									
+									<li class="mb-2"><span
+											class="resume-lang-name font-weight-bold">English</span> <small
+											class="text-muted font-weight-normal">(Proficient)</small></li>
+									
+									<li class=""><span
+											class="resume-lang-name font-weight-bold">Hindi</span> <small
+											class="text-muted font-weight-normal">(Native)</small></li>
+									
+								</ul>
+							</div>
+						</section>
+						
+						<!-- interests -->
+						
+						<section class="resume-section interests-section mb-5">
+							<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
+							<div class="resume-section-content">
+								<ul class="list-unstyled">
+									
+									<li class="list-inline-item">
+										<span class="badge badge-light">Trekking</span>
+									</li>
+									<!-- <li class="mb-1">Trekking</li> -->
+									
+									<li class="list-inline-item">
+										<span class="badge badge-light">Net Surfing</span>
+									</li>
+									<!-- <li class="mb-1">Net Surfing</li> -->
+									
+									<li class="list-inline-item">
+										<span class="badge badge-light">Cooking</span>
+									</li>
+									<!-- <li class="mb-1">Cooking</li> -->
+									
+								</ul>
+							</div>
+						</section>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</article>
+
+
+	<footer class="footer text-center pt-2 pb-5">
+		<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+		<small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <a
+				href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+	</footer>
+
+
+
+</body>
+
+</html>
