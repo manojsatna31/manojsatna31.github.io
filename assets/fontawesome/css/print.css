@@ -1,0 +1,131 @@
+/* 
+================================================================================
+|                                                                              |
+|                             PRINT STYLESHEET                                 |
+|                                                                              |
+|   This file restyles the resume for a clean, single-column, ink-friendly     |
+|   format when printing or saving as a PDF.                                   |
+|                                                                              |
+================================================================================
+*/
+
+@media print {
+
+    /* --- Universal Print Settings --- */
+    body {
+        -webkit-print-color-adjust: exact; /* Ensures backgrounds print in Chrome/Safari */
+        print-color-adjust: exact;
+        background-color: #fff; /* Force white background */
+        font-size: 10pt; /* Use points for better print consistency */
+    }
+
+    /* --- Hide Unnecessary Elements --- */
+    footer {
+        display: none !important; /* Hide the footer */
+    }
+
+    /* --- Layout & Structure --- */
+    .resume-wrapper {
+        padding-top: 2rem; /* Add some top margin for the printed page */
+    }
+
+    .resume-wrapper-inner {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important; /* Remove the shadow */
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Convert two-column layout to single-column */
+    .col-lg-9,
+    .col-lg-3 {
+        width: 100% !important;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .resume-body {
+        padding: 1rem 0 !important; /* Reduce padding for print */
+    }
+
+
+    /* --- Header Section --- */
+    .resume-header {
+        background: none !important; /* Remove the colored header background */
+        padding-bottom: 1rem !important;
+    }
+
+    .resume-header .name,
+    .resume-header .title,
+    .resume-header .text-link {
+        color: #000 !important; /* Make all header text black */
+    }
+
+    .resume-header .fa-container {
+        display: none; /* Hide social media icons to save space, the links are still there if needed */
+    }
+
+    .resume-picture-holder {
+        display: flex;
+        justify-content: center; /* Center the profile picture */
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .resume-header .col.p-3.p-md-4 {
+        text-align: center; /* Center the name, title, and contact info */
+    }
+
+    .resume-header .list-unstyled {
+        display: inline-flex;
+        gap: 1.5rem; /* Space out email and phone horizontally */
+    }
+
+    .resume-header .resume-social {
+        justify-content: center;
+    }
+    
+    .resume-header .fa-container {
+        display: inline-block; /* Show social icons */
+    }
+
+
+    /* --- Work Experience Timeline --- */
+    .resume-timeline::before {
+        display: none; /* Hide the timeline vertical line */
+    }
+
+    .resume-timeline-item {
+        padding-left: 0 !important; /* Remove timeline padding */
+    }
+
+
+    /* --- Skills Section --- */
+    .progress {
+        border: 1px solid #ccc; /* Add a border to the progress bar container */
+        height: 1rem;
+    }
+
+    .progress-bar {
+        background-color: #ccc !important; /* Use a light grey for progress bars to save ink */
+    }
+
+
+    /* --- Awards Section --- */
+    .resume-awards-list .resume-award-icon {
+        color: #000 !important; /* Make award icons black */
+    }
+
+
+    /* --- Page Break Control --- */
+    section.resume-section,
+    article.resume-timeline-item {
+        page-break-inside: avoid; /* Prevent sections from breaking across pages */
+    }
+
+    h2, h3, h4 {
+        page-break-after: avoid; /* Prevent page breaks right after a heading */
+    }
+}
